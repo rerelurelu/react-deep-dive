@@ -1,32 +1,19 @@
-import { useState, useCallback, useMemo } from 'react';
-import './App.css';
-import ChildArea from './components/ChildArea/ChildArea';
+import styled from 'styled-components';
+
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+`;
 
 const App = () => {
-  const [text, setText] = useState('');
-  const [open, setOpen] = useState(false);
-
-  const onChangeText = (e) => {
-    setText(e.target.value);
-  };
-
-  const onClickOpen = () => {
-    setOpen(true);
-  };
-
-  const onClickClose = useCallback(() => {
-    setOpen(false);
-  }, []);
-
-  const tmp = useMemo(() => 1 + 3, []);
-  console.log(tmp);
-
   return (
-    <div className="App">
-      <input type="text" value={text} onChange={onChangeText} />
-      <button onClick={onClickOpen}>Display</button>
-      <ChildArea open={open} onClickClose={onClickClose} />
-    </div>
+    <Layout>
+      <h1>Hi!</h1>
+    </Layout>
   );
 };
 
