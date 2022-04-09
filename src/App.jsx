@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { PrimaryButton } from './components/atoms/button/PrimaryButton';
-import { SecondaryButton } from './components/atoms/button/SecondaryButton';
+import { SearchInput } from './components/molecules/SearchInput';
 
 const StLayout = styled.div`
   display: flex;
@@ -15,8 +14,7 @@ const App = () => {
   return (
     <StLayout>
       <h1>Hi!</h1>
-      <PrimaryButton>Primary</PrimaryButton>
-      <SecondaryButton>Secondary</SecondaryButton>
+      <SearchInput />
     </StLayout>
   );
 };
