@@ -1,23 +1,19 @@
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Work from './Pages/Work';
+import styled from 'styled-components';
+
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+`;
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Link to="/">Home</Link>
-        <Link to="about">About</Link>
-        <Link to="work">Work</Link>
-      </div>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="about/*" element={<About />} />
-        <Route path="work" element={<Work />} />
-      </Routes>
-    </BrowserRouter>
+    <Layout>
+      <h1>Hi!</h1>
+    </Layout>
   );
 };
 
